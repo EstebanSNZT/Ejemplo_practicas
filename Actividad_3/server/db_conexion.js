@@ -6,9 +6,9 @@ const port = 3000;
 app.use(express.json());
 
 const dbConfig = {
-  user: "system",
-  password: "123456",
-  connectString: "localhost:1521/xe",
+  user: "EstebanSanchez",
+  password: "202300769",
+  connectString: "localhost:1521",
 };
 
 // 1. OBTENER USUARIO POR ID (GET)
