@@ -1,14 +1,17 @@
 const express = require("express");
 const oracledb = require("oracledb");
+oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 const app = express();
+const cors = require("cors");
 const port = 3000;
 
+app.use(cors());
 app.use(express.json());
 
 const dbConfig = {
   user: "EstebanSanchez",
   password: "202300769",
-  connectString: "localhost:1521",
+  connectString: "172.17.0.2:1521/XEPDB1",
 };
 
 // 1. OBTENER USUARIO POR ID (GET)
